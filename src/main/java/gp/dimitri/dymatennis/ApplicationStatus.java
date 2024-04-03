@@ -1,4 +1,6 @@
 package gp.dimitri.dymatennis;
 
-public class ApplicationSattus {
+
+public enum ApplicationStatus {
+    OK, KO;
 }

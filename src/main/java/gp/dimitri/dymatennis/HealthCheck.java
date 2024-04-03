@@ -1,4 +1,4 @@
-package gp.dimitri.dymatennis.dao.entity;
+package gp.dimitri.dymatennis;
 
 import gp.dimitri.dymatennis.ApplicationStatus;
 

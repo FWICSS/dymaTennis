@@ -1,4 +1,4 @@
-package gp.dimitri.dymatennis.dao.entity;
+package gp.dimitri.dymatennis;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package gp.dimitri.dymatennis.dao.repository;
+package gp.dimitri.dymatennis.repository;
 
 
 import jakarta.persistence.EntityManager;

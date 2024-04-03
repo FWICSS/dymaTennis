@@ -1,2 +1,4 @@
-package gp.dimitri.dymatennis;public class Error {
+package gp.dimitri.dymatennis;
+
+public record Error(String errorDetails) {
 }

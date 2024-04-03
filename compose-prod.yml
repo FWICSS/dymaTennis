@@ -9,8 +9,25 @@ services:
     ports:
       - '5424:5432'
     volumes:
-      - ./postgres-data-production:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres-data-production:/var/lib/postgresql/data
+      - ./src/main/docker/prod/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+  dyma-tennis-application:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dyma-tennis
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dyma-postgres-production:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=5ML^Es#x%4U&DK6c
+    depends_on:
+      - dyma-postgresql
 
 volumes:
   postgres-data-production:
+networks:
+  dyma-network:
